@@ -16,5 +16,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func ExperienceButton(_ sender: Any) {
+        performSegue(withIdentifier: "CVExperienceSegue", sender: self)
+    }
 }
 

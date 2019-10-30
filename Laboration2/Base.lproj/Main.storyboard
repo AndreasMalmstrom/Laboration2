@@ -111,6 +111,9 @@
                                 <state key="normal" title="Experience">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="ExperienceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7GU-D7-iSj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -138,7 +141,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="4BJ-5a-1d4" kind="presentation" id="OZf-rN-mGp"/>
+                        <segue destination="4BJ-5a-1d4" kind="presentation" identifier="CVExperienceSegue" id="OZf-rN-mGp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
