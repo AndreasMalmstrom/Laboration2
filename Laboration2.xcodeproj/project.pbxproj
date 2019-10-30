@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92C3E78E2369DFC7008741C7 /* ExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C3E78D2369DFC7008741C7 /* ExperienceViewController.swift */; };
 		92F9668223698E5C00196BC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9668123698E5C00196BC4 /* AppDelegate.swift */; };
 		92F9668423698E5C00196BC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9668323698E5C00196BC4 /* SceneDelegate.swift */; };
 		92F9668623698E5C00196BC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9668523698E5C00196BC4 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92C3E78D2369DFC7008741C7 /* ExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewController.swift; sourceTree = "<group>"; };
 		92F9667E23698E5C00196BC4 /* Laboration2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Laboration2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F9668123698E5C00196BC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92F9668323698E5C00196BC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				92F9668323698E5C00196BC4 /* SceneDelegate.swift */,
 				92F9668523698E5C00196BC4 /* ViewController.swift */,
 				92F9668723698E5C00196BC4 /* Main.storyboard */,
+				92C3E78D2369DFC7008741C7 /* ExperienceViewController.swift */,
 				92F9668A23698E5D00196BC4 /* Assets.xcassets */,
 				92F9668C23698E5D00196BC4 /* LaunchScreen.storyboard */,
 				92F9668F23698E5D00196BC4 /* Info.plist */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C3E78E2369DFC7008741C7 /* ExperienceViewController.swift in Sources */,
 				92F9668623698E5C00196BC4 /* ViewController.swift in Sources */,
 				92F9668223698E5C00196BC4 /* AppDelegate.swift in Sources */,
 				92F9668423698E5C00196BC4 /* SceneDelegate.swift in Sources */,
