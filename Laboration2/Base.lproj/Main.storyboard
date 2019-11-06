@@ -80,7 +80,7 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="ExperienceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7GU-D7-iSj"/>
+                                    <segue destination="hVF-Gk-lZo" kind="show" id="psw-Su-fwV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCo-bl-2a3">
@@ -112,31 +112,77 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Andreas Malmström" id="vZB-43-Enk"/>
-                    <connections>
-                        <segue destination="4BJ-5a-1d4" kind="show" identifier="CVExperienceSegue" id="OZf-rN-mGp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028.985507246377" y="75.669642857142847"/>
         </scene>
-        <!--ExperienceView Controller-->
-        <scene sceneID="7Lh-gd-56y">
+        <!--Experience-->
+        <scene sceneID="rfP-zY-H41">
             <objects>
-                <viewController id="4BJ-5a-1d4" userLabel="ExperienceView Controller" customClass="ExperienceViewController" customModule="Laboration2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oug-Hn-P3v">
+                <tableViewController id="hVF-Gk-lZo" customClass="ExperienceTableViewController" customModule="Laboration2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mQe-ew-ePR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="ZqK-Uo-oPs"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Experience" id="Bw4-Ys-6tY">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="uS4-I0-YMd"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="crO-Bj-Ll3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExperienceCell" id="jG6-EN-yWP" customClass="ExperienceTableViewCell" customModule="Laboration2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="115.33333587646484"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jG6-EN-yWP" id="KJQ-im-jwn">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="115.33333587646484"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XFV-wp-u8J" userLabel="experienceImageView">
+                                            <rect key="frame" x="20" y="20" width="75" height="75.333333333333329"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="75" id="2eC-Wy-tSd"/>
+                                                <constraint firstAttribute="width" constant="75" id="S2G-qR-U87"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPa-hW-nTL" userLabel="experienceNameLabel">
+                                            <rect key="frame" x="115" y="20" width="279" height="27.666666666666671"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bt-aB-o3a" userLabel="experienceYears">
+                                            <rect key="frame" x="115" y="71.333333333333329" width="279" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="XFV-wp-u8J" firstAttribute="leading" secondItem="KJQ-im-jwn" secondAttribute="leading" constant="20" id="5Jw-rB-hRL"/>
+                                        <constraint firstItem="KPa-hW-nTL" firstAttribute="top" secondItem="XFV-wp-u8J" secondAttribute="top" id="ENr-xB-nnN"/>
+                                        <constraint firstItem="XFV-wp-u8J" firstAttribute="top" secondItem="KJQ-im-jwn" secondAttribute="top" constant="20" id="XSv-xM-f7J"/>
+                                        <constraint firstItem="0Bt-aB-o3a" firstAttribute="leading" secondItem="XFV-wp-u8J" secondAttribute="trailing" constant="20" id="azA-Xj-T5P"/>
+                                        <constraint firstAttribute="trailing" secondItem="KPa-hW-nTL" secondAttribute="trailing" constant="20" id="l6E-NW-jV7"/>
+                                        <constraint firstAttribute="bottom" secondItem="XFV-wp-u8J" secondAttribute="bottom" constant="20" id="mZg-xX-j1e"/>
+                                        <constraint firstItem="KPa-hW-nTL" firstAttribute="leading" secondItem="XFV-wp-u8J" secondAttribute="trailing" constant="20" id="oXG-zM-Swd"/>
+                                        <constraint firstAttribute="trailing" secondItem="0Bt-aB-o3a" secondAttribute="trailing" constant="20" id="pju-7P-gsg"/>
+                                        <constraint firstItem="0Bt-aB-o3a" firstAttribute="bottom" secondItem="XFV-wp-u8J" secondAttribute="bottom" id="t0P-pE-lfp"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="experienceImageView" destination="XFV-wp-u8J" id="PPE-W2-mGH"/>
+                                    <outlet property="experienceNameLabel" destination="KPa-hW-nTL" id="htX-mL-XcJ"/>
+                                    <outlet property="experienceYears" destination="0Bt-aB-o3a" id="QfT-44-jQG"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="hVF-Gk-lZo" id="Hex-Jt-lxY"/>
+                            <outlet property="delegate" destination="hVF-Gk-lZo" id="aJ7-cR-Pjz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Experience" id="fhu-NA-1Mn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6g2-TK-3sf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2145" y="75"/>
+            <point key="canvasLocation" x="2047.826086956522" y="75.669642857142847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mAj-SB-zC9">
