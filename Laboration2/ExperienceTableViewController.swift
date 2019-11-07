@@ -11,18 +11,21 @@ import UIKit
 class ExperienceTableViewController: UITableViewController {
     
     
-    let section = ["Work" , "Education" ]
-    
-    let items = [["Work1", "Work2"], ["Education1"]]
-    
-    let years = [["2001-2002", "2003-2015"], ["2015-Current"]]
+//    let section = ["Work" , "Education" ]
+//
+//    let items = [["Work1", "Work2"], ["Education1"]]
+//
+//    let years = [["2001-2002", "2003-2015"], ["2015-Current"]]
     
 
-
+    var experiences: [Experience] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -50,9 +53,10 @@ class ExperienceTableViewController: UITableViewController {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ExperienceCell", for: indexPath) as? ExperienceTableViewCell {
             
-            cell.experienceImageView.image = UIImage()
-            cell.experienceNameLabel.text = self.items[indexPath.section][indexPath.row]
-            cell.experienceYears.text = self.years[indexPath.section][indexPath.row]
+//            cell.experienceImageView.image = UIImage()
+//            cell.experienceNameLabel.text = self.items[indexPath.section][indexPath.row]
+//            cell.experienceYears.text = self.years[indexPath.section][indexPath.row]
+            
             
             return cell
         }
