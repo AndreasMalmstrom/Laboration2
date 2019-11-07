@@ -9,36 +9,33 @@
 import UIKit
 
 class ExperienceTableViewController: UITableViewController {
+
     
+    let sections = ["Work" , "Education" ]
+
+    let items = [["Work1", "Work2"], ["Education1"]]
+
+    let years = [["2001-2002", "2003-2015"], ["2015-Current"]]
     
-//    let section = ["Work" , "Education" ]
-//
-//    let items = [["Work1", "Work2"], ["Education1"]]
-//
-//    let years = [["2001-2002", "2003-2015"], ["2015-Current"]]
+    let images = [["trash", "trash.fill"], ["pencil"]]
     
 
-    var experiences: [Experience] = []
+    var experiences: [[Experience]] = [[]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         
-        
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return self.section.count
+        return self.sections.count
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,25 +43,39 @@ class ExperienceTableViewController: UITableViewController {
         return self.items[section].count
     }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.section[section]
+        return self.sections[section]
     }
  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ExperienceCell", for: indexPath) as? ExperienceTableViewCell {
+
             
-//            cell.experienceImageView.image = UIImage()
-//            cell.experienceNameLabel.text = self.items[indexPath.section][indexPath.row]
-//            cell.experienceYears.text = self.years[indexPath.section][indexPath.row]
+            cell.experienceImageView.image = UIImage()
+            cell.experienceNameLabel.text = self.items[indexPath.section][indexPath.row]
+            cell.experienceYears.text = self.years[indexPath.section][indexPath.row]
             
             
             return cell
         }
-        
-        
-
-
+ 
         return UITableViewCell()
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? ExperienceDetailsViewController
+        let indexPathRow = tableView.indexPathForSelectedRow?.row
+        let indexPathSection = tableView.indexPathForSelectedRow?.section
+        
+        
+        
+        destination?.title = self.items[indexPathSection!][indexPathRow!]
+        
+        destination?.item = self.items[indexPathSection!][indexPathRow!]
+        destination?.years = self.years[indexPathSection!][indexPathRow!]
+        destination?.image = self.images[indexPathSection!][indexPathRow!]
+        destination?.desc = "Description"
     }
     
 

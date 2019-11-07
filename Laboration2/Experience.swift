@@ -9,19 +9,21 @@
 import Foundation
 
 class Experience {
-    let imageName: String
-    let experienceType: String
-    let experienceName: String
-    let experienceYears: String
-    let experienceDescription: String
+    
+    let section: String
+    let item: String
+    let years: String
+    let image: String
+    let desc: String
     
     // By setting default values here we don't have to set these parameters when creating the object
-    init(imageName: String = "default", experienceType: String = "Type", experienceName: String = "Name", experienceYears: String = "20XX-20XX", experienceDescription: String = "Description") {
-        self.imageName = imageName
-        self.experienceType = experienceType
-        self.experienceName = experienceName
-        self.experienceYears = experienceYears
-        self.experienceDescription = experienceDescription
+    init(section: String = "Type", item: String = "Name", years: String = "20XX-20XX",image: String = "default",  desc: String = "Description") {
+        
+        self.section = section
+        self.item = item
+        self.years = years
+        self.image = image
+        self.desc = desc
     }
 
 }

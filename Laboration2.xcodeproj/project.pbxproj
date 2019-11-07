@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		92321B0A23745E0000F4DE49 /* Experience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92321B0923745E0000F4DE49 /* Experience.swift */; };
+		92321B0E237488CD00F4DE49 /* ExperienceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92321B0D237488CD00F4DE49 /* ExperienceDetailsViewController.swift */; };
 		92E1E1B32372F1A800DC56CD /* ExperienceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E1E1B22372F1A800DC56CD /* ExperienceTableViewController.swift */; };
 		92E1E1B52372F77B00DC56CD /* ExperienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E1E1B42372F77B00DC56CD /* ExperienceTableViewCell.swift */; };
 		92F9668223698E5C00196BC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9668123698E5C00196BC4 /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		92321B0923745E0000F4DE49 /* Experience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experience.swift; sourceTree = "<group>"; };
+		92321B0D237488CD00F4DE49 /* ExperienceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceDetailsViewController.swift; sourceTree = "<group>"; };
 		92E1E1B22372F1A800DC56CD /* ExperienceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewController.swift; sourceTree = "<group>"; };
 		92E1E1B42372F77B00DC56CD /* ExperienceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewCell.swift; sourceTree = "<group>"; };
 		92F9667E23698E5C00196BC4 /* Laboration2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Laboration2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 				92F9668323698E5C00196BC4 /* SceneDelegate.swift */,
 				92F9668523698E5C00196BC4 /* ViewController.swift */,
 				92F9668723698E5C00196BC4 /* Main.storyboard */,
+				92321B0D237488CD00F4DE49 /* ExperienceDetailsViewController.swift */,
 				92E1E1B22372F1A800DC56CD /* ExperienceTableViewController.swift */,
 				92321B0923745E0000F4DE49 /* Experience.swift */,
 				92E1E1B42372F77B00DC56CD /* ExperienceTableViewCell.swift */,
@@ -273,6 +276,7 @@
 				92E1E1B52372F77B00DC56CD /* ExperienceTableViewCell.swift in Sources */,
 				92321B0A23745E0000F4DE49 /* Experience.swift in Sources */,
 				92F9668223698E5C00196BC4 /* AppDelegate.swift in Sources */,
+				92321B0E237488CD00F4DE49 /* ExperienceDetailsViewController.swift in Sources */,
 				92F9668423698E5C00196BC4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
