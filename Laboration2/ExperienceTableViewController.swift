@@ -13,14 +13,15 @@ class ExperienceTableViewController: UITableViewController {
     
     let sections = ["Work" , "Education" ]
 
-    let items = [["Work1", "Work2"], ["Education1"]]
+    let items = [["MacDonalds", "Jensens Böfhus"], ["DMP"]]
 
-    let years = [["2001-2002", "2003-2015"], ["2015-Current"]]
+    let years = [["2007-2011", "2013-Current"], ["2018-Current"]]
     
     let images = [["trash", "trash.fill"], ["pencil"]]
     
+    let desc = [["Frying burgers and flipping tables", "Cooking medium-rare steaks all day long"], ["Learning to code"]]
+    
 
-    var experiences: [[Experience]] = [[]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +76,7 @@ class ExperienceTableViewController: UITableViewController {
         destination?.item = self.items[indexPathSection!][indexPathRow!]
         destination?.years = self.years[indexPathSection!][indexPathRow!]
         destination?.image = self.images[indexPathSection!][indexPathRow!]
-        destination?.desc = "Description"
+        destination?.desc = self.desc[indexPathSection!][indexPathRow!]
     }
     
 
