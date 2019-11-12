@@ -28,7 +28,6 @@ class SkillsViewController: UIViewController {
     }
     
     func hideMovingSquareAnimated(animated: Bool) {
-        //remove current constraint
         self.removeMovingSquareXPositionConstraint()
         let hideConstraint = NSLayoutConstraint(item: self.movingSquare as Any,
             attribute: .right,
@@ -39,12 +38,10 @@ class SkillsViewController: UIViewController {
             constant: 0)
         self.movingSquareXPositionConstraint = hideConstraint
         self.view.addConstraint(hideConstraint)
-        //animate changes
         self.performConstraintLayout(animated: animated)
     }
     
     func showMovingSquareAnimated(animated: Bool) {
-        //remove current constraint
         self.removeMovingSquareXPositionConstraint()
         let centerXConstraint = NSLayoutConstraint(item: self.movingSquare as Any,
             attribute: .centerX,
@@ -55,7 +52,6 @@ class SkillsViewController: UIViewController {
             constant: 0)
         self.movingSquareXPositionConstraint = centerXConstraint
         self.view.addConstraint(centerXConstraint)
-        //animate changes
         self.performConstraintLayout(animated: animated)
     }
     
@@ -80,21 +76,5 @@ class SkillsViewController: UIViewController {
             self.movingSquareXPositionConstraint = nil
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
